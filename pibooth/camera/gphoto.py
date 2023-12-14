@@ -296,7 +296,7 @@ class GpCamera(BaseCamera):
             self.set_config_value('imgsettings', 'iso', self.capture_iso)
 
         self._captures.append((self._cam.capture(gp.GP_CAPTURE_IMAGE), effect))
-        time.sleep(0.3)  # Necessary to let the time for the camera to save the image
+        time.sleep(1)  # Necessary to let the time for the camera to save the image
 
         if self.capture_iso != self.preview_iso:
             self.set_config_value('imgsettings', 'iso', self.preview_iso)
